@@ -5,7 +5,8 @@
 *.iml
 *.code-workspace
 .changelog
-
+__tests__
+examples
 node_modules
 .yarn
 
