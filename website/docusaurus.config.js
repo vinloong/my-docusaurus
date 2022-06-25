@@ -11,10 +11,6 @@ const math = require('remark-math');
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
 const versions = require('./versions.json');
 const VersionsArchived = require('./versionsArchived.json');
-const {
-  dogfoodingPluginInstances,
-  dogfoodingThemeInstances,
-} = require('./_dogfooding/dogfooding.config');
 
 const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
   0,
@@ -117,38 +113,15 @@ const config = {
     description:
       'An optimized site generator in React. Docusaurus helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.',
   },
-  staticDirectories: [
-    'static',
-    path.join(__dirname, '_dogfooding/_asset-tests'),
-    // Adding a non-existent static directory. If user deleted `static` without
-    // specifying `staticDirectories: []`, build should still work
-    path.join(__dirname, '_dogfooding/non-existent'),
-  ],
-  themes: ['live-codeblock', ...dogfoodingThemeInstances],
+  // staticDirectories: [
+  //   'static',
+  //   path.join(__dirname, '_dogfooding/_asset-tests'),
+  //   // Adding a non-existent static directory. If user deleted `static` without
+  //   // specifying `staticDirectories: []`, build should still work
+  //   path.join(__dirname, '_dogfooding/non-existent'),
+  // ],
+  themes: ['live-codeblock'],
   plugins: [
-    [
-      require.resolve('./src/plugins/changelog/index.js'),
-      {
-        blogTitle: 'Docusaurus changelog',
-        blogDescription:
-          'Keep yourself up-to-date about new features in every release',
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: 'Changelog',
-        routeBasePath: '/changelog',
-        showReadingTime: false,
-        postsPerPage: 20,
-        archiveBasePath: null,
-        authorsMapPath: 'authors.json',
-        feedOptions: {
-          type: 'all',
-          title: 'Docusaurus changelog',
-          description:
-            'Keep yourself up-to-date about new features in every release',
-          copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
-          language: 'en',
-        },
-      },
-    ],
     [
       'content-docs',
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -271,7 +244,6 @@ const config = {
         ],
       },
     ],
-    ...dogfoodingPluginInstances,
   ],
   presets: [
     [
@@ -338,7 +310,7 @@ const config = {
           customCss: [
             require.resolve('./src/css/custom.css'),
             // relative paths are relative to site dir
-            './_dogfooding/dogfooding.css',
+            // './_dogfooding/dogfooding.css',
           ],
         },
         gtag: !isDeployPreview
@@ -369,10 +341,6 @@ const config = {
         defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: true,
-      },
-      announcementBar: {
-        id: 'announcementBar-2', // Increment on change
-        content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter ${TwitterSvg}</a>`,
       },
       prism: {
         additionalLanguages: ['java', 'latex'],
@@ -425,13 +393,6 @@ const config = {
             label: 'Community',
             position: 'left',
             activeBaseRegex: `/community/`,
-          },
-          // This item links to a draft doc: only displayed in dev
-          {
-            type: 'doc',
-            docId: 'test-draft',
-            label: 'Tests',
-            docsPluginId: 'docs-tests',
           },
           // Custom item for dogfooding: only displayed in /tests/ routes
           {
@@ -518,15 +479,7 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Feature Requests',
-                to: '/feature-requests',
-              },
-              {
+               {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
@@ -551,48 +504,9 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-              {
-                html: `
-                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
-                </a>
-              `,
-              },
-            ],
-          },
-          {
-            title: 'Legal',
-            // Please don't remove the privacy and terms, it's a legal
-            // requirement.
-            items: [
-              {
-                label: 'Privacy',
-                href: 'https://opensource.facebook.com/legal/privacy/',
-              },
-              {
-                label: 'Terms',
-                href: 'https://opensource.facebook.com/legal/terms/',
-              },
-              {
-                label: 'Data Policy',
-                href: 'https://opensource.facebook.com/legal/data-policy/',
-              },
-              {
-                label: 'Cookie Policy',
-                href: 'https://opensource.facebook.com/legal/cookie-policy/',
-              },
             ],
           },
         ],
-        logo: {
-          alt: 'Meta Open Source Logo',
-          src: '/img/meta_opensource_logo_negative.svg',
-          href: 'https://opensource.fb.com',
-        },
         copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
       },
     }),
