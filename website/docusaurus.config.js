@@ -69,27 +69,6 @@ const config = {
   themes: ['live-codeblock'],
   plugins: [
     [
-      'client-redirects',
-      /** @type {import('@docusaurus/plugin-client-redirects').Options} */
-      ({
-        fromExtensions: ['html'],
-        redirects: [
-          {
-            from: ['/docs/support', '/docs/next/support'],
-            to: '/community/support',
-          },
-          {
-            from: ['/docs/team', '/docs/next/team'],
-            to: '/community/team',
-          },
-          {
-            from: ['/docs/resources', '/docs/next/resources'],
-            to: '/community/resources',
-          },
-        ],
-      }),
-    ],
-    [
       'ideal-image',
       /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
       ({
@@ -289,47 +268,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Learn',
-            items: [
-              {
-                label: 'Introduction',
-                to: 'docs',
-              },
-              {
-                label: 'Installation',
-                to: 'docs/installation',
-              },
-              {
-                label: 'Migration from v1 to v2',
-                to: 'docs/migration',
-              },
-            ],
+            label: 'Introduction',
+            to: 'docs',
           },
           {
-            title: 'Community',
-            items: [
-               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Help',
-                to: '/community/support',
-              },
-            ],
+            label: 'Blog',
+            to: 'blog',
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: 'blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
+          {          
+            label: 'GitHub',
+            href: 'https://github.com/facebook/docusaurus'
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
