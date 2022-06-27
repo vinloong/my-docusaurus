@@ -69,20 +69,6 @@ const config = {
   themes: ['live-codeblock'],
   plugins: [
     [
-      'content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: 'community',
-        path: 'community',
-        routeBasePath: 'community',
-        remarkPlugins: [npm2yarn],
-        editCurrentVersion: true,
-        sidebarPath: require.resolve('./sidebarsCommunity.js'),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      }),
-    ],
-    [
       'client-redirects',
       /** @type {import('@docusaurus/plugin-client-redirects').Options} */
       ({

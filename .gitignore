@@ -35,6 +35,8 @@ website/changelog
 
 website/_dogfooding/_swizzle_theme_tests
 
+website/.docusaurus
+website/.history
 website/i18n/**/*
 #!website/i18n/fr
 #!website/i18n/fr/**/*
