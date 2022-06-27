@@ -41,7 +41,7 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    image: 'img/docusaurus-soc.png',
+    image: 'img/logo.png',
     algolia: {
       appId: 'X1Z85QJPUV',
       apiKey: 'bf7211c161e8205da2f933a02534105a',
@@ -53,8 +53,8 @@ module.exports = {
       title: 'Docusaurus',
       logo: {
         alt: 'Docusaurus Logo',
-        src: 'img/docusaurus.svg',
-        srcDark: 'img/docusaurus_keytar.svg',
+        src: 'img/logo.svg',
+        srcDark: 'img/logo.svg',
       },
     },
   },

@@ -34,7 +34,7 @@ const sidebars = {
         description:
           "Let's learn about the most important Docusaurus concepts!",
         keywords: ['guides'],
-        image: '/img/docusaurus.png',
+        image: '/img/logo.png',
       },
       items: [
         'guides/creating-pages',

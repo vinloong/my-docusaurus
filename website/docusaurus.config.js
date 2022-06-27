@@ -24,13 +24,13 @@ const baseUrl = process.env.BASE_URL ?? '/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Docusaurus',
-  tagline: 'Build optimized websites quickly, focus on your content',
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  title: "loong's site",
+  tagline: '音乐、烧烤、啤酒和代码',
+  organizationName: 'loong',
+  projectName: 'wiki',
   baseUrl,
   baseUrlIssueBanner: true,
-  url: 'https://docusaurus.io',
+  url: 'https://vinloong.github.io',
   // Dogfood both settings:
   // - force trailing slashes for deploy previews
   // - avoid trailing slashes in prod
@@ -95,7 +95,7 @@ const config = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: 'img/docusaurus.png',
+            href: 'img/logo.png',
           },
           {
             tagName: 'link',
@@ -120,18 +120,18 @@ const config = {
           {
             tagName: 'link',
             rel: 'apple-touch-icon',
-            href: 'img/docusaurus.png',
+            href: 'img/logo.png',
           },
           {
             tagName: 'link',
             rel: 'mask-icon',
-            href: 'img/docusaurus.png',
+            href: 'img/logo.png',
             color: 'rgb(62, 204, 94)',
           },
           {
             tagName: 'meta',
             name: 'msapplication-TileImage',
-            content: 'img/docusaurus.png',
+            content: 'img/logo.png',
           },
           {
             tagName: 'meta',
@@ -225,7 +225,7 @@ const config = {
           },
         ],
       },
-      image: 'img/docusaurus-soc.png',
+      image: 'img/logo.png',
       // metadata: [{name: 'twitter:card', content: 'summary'}],
       algolia: {
         appId: 'X1Z85QJPUV',
@@ -234,11 +234,11 @@ const config = {
       },
       navbar: {
         hideOnScroll: true,
-        title: 'Docusaurus',
+        title: "loong's site",
         logo: {
           alt: '',
-          src: 'img/docusaurus.svg',
-          srcDark: 'img/docusaurus_keytar.svg',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo.svg',
           width: 32,
           height: 32,
         },
@@ -257,7 +257,7 @@ const config = {
           },
           // Right
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/vinloong/vinloong.github.io',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -277,7 +277,7 @@ const config = {
           },
           {          
             label: 'GitHub',
-            href: 'https://github.com/facebook/docusaurus'
+            href: 'https://github.com/vinloong/vinloong.github.io'
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
