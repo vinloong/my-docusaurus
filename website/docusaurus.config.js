@@ -244,10 +244,28 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
+            type: 'docSidebar',
             position: 'left',
-            docId: 'introduction',
-            label: 'Docs',
+            sidebarId: 'kubernetes',
+            label: 'Kubernetes'
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'linux',
+            label: 'Linux',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'dev&ops',
+            label: 'DevOps',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'others',
+            label: 'Others',
           },
           {to: 'blog', label: 'Blog', position: 'left'},
           // Custom item for dogfooding: only displayed in /tests/ routes
@@ -257,7 +275,7 @@ const config = {
           },
           // Right
           {
-            href: 'https://github.com/vinloong/vinloong.github.io',
+            href: 'https://github.com/vinloong/wiki',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -277,7 +295,7 @@ const config = {
           },
           {          
             label: 'GitHub',
-            href: 'https://github.com/vinloong/vinloong.github.io'
+            href: 'https://github.com/vinloong/wiki'
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
